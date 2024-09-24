@@ -4,27 +4,24 @@ body {
 }
 
 .sidebar {
-    position: fixed; /* Fixes the sidebar position */
-    top: 0;
-    left: 0;
-    width: 200px; /* Adjust width as needed */
-    height: 100vh; /* Full viewport height */
-    background-color: #333;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    background-color: grey;
     color: #fff;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    overflow: auto; /* Handles overflow if content is too long */
+    padding: 20px 20px; /* Adjust padding */
+    height: 70px;
 }
 
 .sidebar ul {
-    list-style: none;
+    display: flex;
     padding: 0;
+    align-items: center; /* Center items vertically */
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+    margin: 0 10px; /* Adjust margins as needed */
 }
-
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
@@ -40,5 +37,112 @@ body {
 }
 
 section {
-    margin-bottom: 40px;
+    margin-right: 80px;
+}
+li{
+
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    color: #223564;
+}
+.li{
+    margin-left: 200px;
+    padding-left: 100px;
+}
+
+ul{
+
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    color: #223564;
+}
+#cart{
+    padding-left: 300px;
+}
+.sidebar ul li img {
+    width: 70px; /* Adjust width as needed */
+    display: block; /* Ensure it displays properly */
+}
+.logo {
+    display: flex;
+    justify-content: flex-end; /* Align logo to the right */
+    margin-left: 400px; /* Adjust margin as needed */
+    padding-left: 400px;
+    margin-right: 0%;
+    padding-right: 0%;
+}
+img{
+    width: 100%;
+    height: 70%;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 100%; /* Adjust as needed */
+}
+
+.buy-now-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ff5733; /* Change to your preferred color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buy-now-button:hover {
+    background-color: #c70039; /* Change on hover */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'SFProDisplay', sans-serif; /* Apple font */
+}
+
+.image-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.buy-now-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    background-color: #0071e3; /* Apple blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; /* Rounder corners */
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.buy-now-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
 }
