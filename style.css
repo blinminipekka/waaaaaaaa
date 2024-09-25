@@ -2,89 +2,89 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+.logo {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    margin-left: 200px; /* Adjust margin as needed */
+}
 
+.logo img {
+    width: 60px; /* Increased width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between image and text, if needed */
+}
 .sidebar {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space items evenly */
+    align-items: center;
+    justify-content: space-between;
     background-color: grey;
     color: #fff;
-    padding: 20px 20px; /* Adjust padding */
+    padding: 20px 20px;
     height: 70px;
 }
 
 .sidebar ul {
     display: flex;
     padding: 0;
-    align-items: center; /* Center items vertically */
+    align-items: center;
 }
 
 .sidebar ul li {
-    margin: 0 10px; /* Adjust margins as needed */
+    margin: 0 20px; /* Increased horizontal margin for more spacing */
 }
+
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    color: black;
+}
+
+#cart {
+    margin-left: auto;
+    padding-left: 20px;
 }
 
 .content {
-    margin-left: 220px; /* Adjust to account for sidebar width + padding */
+    margin-left: 220px;
     padding: 20px;
+    margin-right: 270px;
 }
 
-section {
-    margin-right: 80px;
-}
-li{
-
-    display: block;
-    list-style-type: none;
-    text-decoration: none;
-    color: #223564;
-}
-.li{
-    margin-left: 200px;
-    padding-left: 100px;
-}
-
-ul{
-
-    display: flex;
-    list-style-type: none;
-    text-decoration: none;
-    color: #223564;
-}
-#cart{
-    padding-left: 300px;
-}
-.sidebar ul li img {
-    width: 70px; /* Adjust width as needed */
-    display: block; /* Ensure it displays properly */
-}
-.logo {
-    display: flex;
-    justify-content: flex-end; /* Align logo to the right */
-    margin-left: 400px; /* Adjust margin as needed */
-    padding-left: 400px;
-    margin-right: 0%;
-    padding-right: 0%;
-}
-img{
+.fullscreen-container {
     width: 100%;
-    height: 70%;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
+
+.fullscreen-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+}
+
 .image-container {
     position: relative;
-    display: inline-block;
+    height: 700px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 .image-container img {
-    display: block;
-    width: 100%; /* Adjust as needed */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .buy-now-button {
@@ -93,56 +93,44 @@ img{
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
-    background-color: #ff5733; /* Change to your preferred color */
+    background-color: #0071e3;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.buy-now-button:hover {
-    background-color: #c70039; /* Change on hover */
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    font-family: 'SFProDisplay', sans-serif; /* Apple font */
-}
-
-.image-container {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio */
-}
-
-.buy-now-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px 30px;
-    background-color: #0071e3; /* Apple blue color */
-    color: white;
-    text-decoration: none;
-    border-radius: 25px; /* Rounder corners */
-    font-size: 20px;
     font-weight: 600;
     text-align: center;
     transition: background-color 0.3s;
 }
 
 .buy-now-button:hover {
-    background-color: #005bb5; /* Darker blue on hover */
+    background-color: #005bb5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.right-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar h2 {
+    color: #333;
+}
+
+.right-sidebar p {
+    color: #666;
+    line-height: 1.6;
 }
